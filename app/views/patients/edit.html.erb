@@ -1,0 +1,41 @@
+<div class='container' style="padding: 100px 0px">
+    <div class="mb-3 row">
+        <h3>Edit Patient</h3>
+    </div>
+    <%= form_for @patient do |f| %>
+        <div class="mb-3 row">
+            <label for="inputName" class="col-sm-2 col-form-label">Name*:</label>
+            <div class="col-sm-10">
+                <%= f.text_field :name, class: "form-control", id:"inputName", required: true %>
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="inputEmail" class="col-sm-2 col-form-label">Email*:</label>
+            <div class="col-sm-10">
+                <%= f.text_field :email, class: "form-control", id: "inputEmail", required: true %>
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="inputDOB" class="col-sm-2 col-form-label">Date of Birth*:</label>
+            <div class="col-sm-10">
+                <%= f.text_field :dob, class: "form-control", id: "inputDOB", required: true %>
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="inputAppointment" class="col-sm-2 col-form-label">Next Appointment:</label>
+            <div class="col-sm-10" style="position: relative">
+                <%= f.text_field :next_appointment_date, class: "form-control", id: "inputAppointment" %>
+            </div>
+        </div>
+        <% if @patient.errors.any? %>
+            <ul>
+                <% @patient.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+            </ul>
+        <% end %>
+         <div class="mb-3">
+            <%= f.submit 'Save', class: "btn btn-primary" %>
+        </div>
+    <% end %>
+</div>

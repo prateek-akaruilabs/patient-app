@@ -1,0 +1,5 @@
+    <tr>
+        <td><%= patient.name %></td>
+        <td><%= link_to patient.email, edit_patient_path(patient) %></td>
+        <td><%= patient.next_appointment_date.strftime("%d/%m/%y: %H:%M:%S %Z") %></td>
+    </tr>

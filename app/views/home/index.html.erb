@@ -1,0 +1,20 @@
+<div class="container" style="padding: 100px 0px">
+    <div class='row justify-content-md-center'>
+        <div class='col-md-6'>
+            <div class='card'>
+                <div class="card-body">
+                    <h5 class="card-title mb-3">Login Details</h5>
+                    <%= form_tag "/login", method: "post" do %>
+                        <div class="mb-3">
+                            <%= text_field_tag :email, params[:email], class: 'form-control', id: 'exampleInputEmail1', placeholder: 'Email' %>
+                        </div>
+                        <div class="mb-3">
+                            <%= password_field_tag :password, params[:password], class: 'form-control', id: 'exampleInputPassword1', placeholder: 'Password' %>
+                        </div>
+                        <%= submit_tag 'Login', class: "btn btn-primary" %>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

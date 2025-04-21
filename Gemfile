@@ -36,7 +36,7 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "bootsnap", require: false
 
 gem 'jwt'
-gem 'bootstrap', '~> 5.3.3'
+gem 'bootstrap', '~> 5.3.5'
 gem 'bootstrap-datepicker-rails'
 gem 'dartsass-sprockets'
 gem 'will_paginate'
